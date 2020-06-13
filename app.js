@@ -1,3 +1,5 @@
+const cafeList = document.querySelector("#cafe-list");
+
 // create element and render cafe
 const renderCafe = (doc) => {
   let li = document.createElement("li");
