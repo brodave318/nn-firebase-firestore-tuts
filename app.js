@@ -30,3 +30,14 @@ const renderCafe = (doc) => {
 db.collection("cafes").get().then((snapshot) => {
   snapshot.docs.map((doc) => renderCafe(doc));
 });
+
+// saving data
+form.addEventListener('submit' e => {
+  e.preventDefault()
+  db.collection('cafes').add({
+    name: form.name.value,
+    city: form.city.value
+  })
+  form.name.value
+  form.city.value
+})
